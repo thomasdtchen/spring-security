@@ -1,0 +1,19 @@
+server:
+  address: 0.0.0.0
+  port: 8088
+  error:
+    include-stacktrace: ALWAYS
+    
+logging:
+  level:
+    org.springframework.security: INFO
+    org.springframework.ldap: debug
+  file: /apps/local/log/kerberos-winauth.log    
+    
+app:
+  ad-domain: THOMAS.COM
+  ad-server: ldap://WIN-NJKU5M92BVD:389
+  service-principal: HTTP/www.easys.com@THOMAS.COM
+  keytab-location: /apps/http.keytab
+  ldap-search-base: DC=thomas,DC=com
+  ldap-search-filter: "(| (userPrincipalName={0}) (sAMAccountName={0}))"

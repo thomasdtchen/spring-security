@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>spring-security-kerberos</groupId>
+    <artifactId>spring-security-kerberos-winauth</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>spring-security-kerberos-winauth-web</artifactId>
+  <name>spring-security-kerberos-winauth-web</name>
+  <url>http://maven.apache.org</url>
+  <packaging>jar</packaging>
+  <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        
+        <dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-taglibs</artifactId>
+		</dependency>
+        
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-ldap</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework.security.kerberos</groupId>
+            <artifactId>spring-security-kerberos-core</artifactId>
+            <version>${spring-security-kerberos.version}</version>
+        </dependency>
+        
+        <dependency>
+		    <groupId>org.springframework.security.kerberos</groupId>
+		    <artifactId>spring-security-kerberos-client</artifactId>
+		    <version>${spring-security-kerberos.version}</version>
+		</dependency>
+
+        <dependency>
+            <groupId>org.springframework.security.kerberos</groupId>
+            <artifactId>spring-security-kerberos-web</artifactId>
+            <version>${spring-security-kerberos.version}</version>
+        </dependency>
+        
+        <!-- Hot Deploy -->
+	  	<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-devtools</artifactId>
+		    <optional>true</optional>
+		</dependency>		
+		
+	   <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+        <dependency>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-configuration-processor</artifactId>
+        	<optional>true</optional>
+        </dependency>
+        
+      <dependency>
+        	<groupId>org.apache.tiles</groupId>
+        	<artifactId>tiles-jsp</artifactId>
+        	<version>3.0.8</version>
+        </dependency>
+        
+        <dependency>
+        	<groupId>junit</groupId>
+        	<artifactId>junit</artifactId>
+        	<scope>test</scope>
+        </dependency>
+        
+    </dependencies>
+
+</project>
